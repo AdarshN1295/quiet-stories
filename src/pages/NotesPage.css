@@ -1,0 +1,16 @@
+/* ============ NOTE HERO ============ */
+.note-hero {
+  min-height: min(420px, 56vh);
+}
+
+.note-hero .hero-note .idea-quote-sign {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* ============ DEAR READER LETTER ============ */
+.letter-heading {
+  font-style: italic;
+  font-size: 1.85rem;
+  margin-bottom: 0.25rem;
+}
