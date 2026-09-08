@@ -302,7 +302,7 @@ function StoryPage() {
 
         <div
           className="hero-bg"
-          style={{ backgroundImage: `url(${story.image})` }}
+          style={{ backgroundImage: `url(${story.storyImage})` }}
         />
         <div className="hero-overlay story-hero-overlay" />
 
@@ -525,7 +525,7 @@ function StoryPage() {
               key={item.no}
             >
               <div className="related-grid-image">
-                <img src={item.image} alt={item.title} />
+                <img src={item.homeImage} alt={item.title} />
               </div>
               <div className="related-grid-body">
                 <span className="story-no">{item.no}</span>

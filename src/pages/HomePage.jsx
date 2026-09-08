@@ -17,6 +17,11 @@ import {
 import "./HomePage.css";
 import { useDocumentMeta } from "../lib/useDocumentMeta";
 import { seo } from "../data/seo";
+import { storyAssets } from "../data/stories.js";
+
+// Falls back to the unsplash placeholder until a hp-cover.* image is
+// dropped into src/assets/Stories/<no>/ for that story.
+const homeCover = (no, fallback) => storyAssets[no]?.["hp-cover"] || fallback;
 
 const stories = [
   {
@@ -24,64 +29,80 @@ const stories = [
     title: "The Day Someone Jumped Into the Water",
     tagline: "A decision. A stranger. A life.",
     tags: ["Drama", "Hope"],
-    image:
-      "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85",
+    image: homeCover(
+      "01",
+      "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85"
+    ),
   },
   {
     no: "02",
     title: "The Girl and the Tiger",
     tagline: "Sometimes courage finds you, not the other way around.",
     tags: ["Adventure", "Courage"],
-    image:
-      "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1100&q=85",
+    image: homeCover(
+      "02",
+      "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1100&q=85"
+    ),
   },
   {
     no: "03",
     title: "The Last Train Home",
     tagline: "Some goodbyes aren't the end.",
     tags: ["Romance", "Bittersweet"],
-    image:
-      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1100&q=85",
+    image: homeCover(
+      "03",
+      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1100&q=85"
+    ),
   },
   {
     no: "04",
     title: "The Horse That Chose His Rider",
     tagline: "Not all connections need words.",
     tags: ["Friendship", "Destiny"],
-    image:
-      "https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1100&q=85",
+    image: homeCover(
+      "04",
+      "https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1100&q=85"
+    ),
   },
   {
     no: "05",
     title: "The Stranger Under the Umbrella",
     tagline: "Some conversations change everything.",
     tags: ["Slice of Life", "Warmth"],
-    image:
-      "https://images.unsplash.com/photo-1519692933481-e162a57d6721?auto=format&fit=crop&w=1100&q=85",
+    image: homeCover(
+      "05",
+      "https://images.unsplash.com/photo-1519692933481-e162a57d6721?auto=format&fit=crop&w=1100&q=85"
+    ),
   },
   {
     no: "06",
     title: "The Night We Watched the Stars",
     tagline: "Some moments are meant to be remembered.",
     tags: ["Peace", "Imagination"],
-    image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1100&q=85",
+    image: homeCover(
+      "06",
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1100&q=85"
+    ),
   },
   {
     no: "07",
     title: "The Letter Never Sent",
     tagline: "Some words are safest left on paper.",
     tags: ["Nostalgia", "Regret"],
-    image:
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1100&q=85",
+    image: homeCover(
+      "07",
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1100&q=85"
+    ),
   },
   {
     no: "08",
     title: "The Song She Never Finished",
     tagline: "Some melodies are meant to stay unfinished.",
     tags: ["Music", "Longing"],
-    image:
-      "https://images.unsplash.com/photo-1517230878791-4d28214057c2?auto=format&fit=crop&w=1100&q=85",
+    image: homeCover(
+      "08",
+      "https://images.unsplash.com/photo-1517230878791-4d28214057c2?auto=format&fit=crop&w=1100&q=85"
+    ),
   },
 ];
 

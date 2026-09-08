@@ -1,10 +1,44 @@
-export const stories = [
+// Picks up any image dropped into src/assets/Stories/<story-no>/ — no code
+// changes needed to add covers or chapter art for a story.
+// Expected file names inside each story's folder:
+//   hp-cover.*  -> homeImage (shown on the homepage / story cards)
+//   st-cover.*  -> storyImage (story page banner background)
+//   cp1.* .. cpN.* -> chapter[N - 1].image
+const storyImageModules = import.meta.glob("/src/assets/Stories/*/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
+export const storyAssets = Object.entries(storyImageModules).reduce((map, [path, url]) => {
+  const match = path.match(/\/Stories\/([^/]+)\/([^/.]+)\.[^./]+$/);
+  if (!match) return map;
+  const [, no, name] = match;
+  map[no] = map[no] || {};
+  map[no][name] = url;
+  return map;
+}, {});
+
+function withStoryImages(story) {
+  const assets = storyAssets[story.no] || {};
+  return {
+    ...story,
+    homeImage: assets["hp-cover"] || story.image,
+    storyImage: assets["st-cover"] || story.image,
+    chapters: story.chapters.map((chapter, index) => ({
+      ...chapter,
+      image: assets[`cp${index + 1}`] || chapter.image,
+    })),
+  };
+}
+
+const rawStories = [
   {
     no: "01",
     title: "The Girl Beneath the Sea",
     tagline: "He jumped into the sea to save a stranger. He came back with a secret.",
     tags: ["Drama", "Rescue", "Hope"],
-    readTime: "18 min read",
+    readTime: "12 min read",
     image:
       "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1400&q=80",
     heroQuote: ["A dive. A girl. A secret."],
@@ -15,7 +49,7 @@ export const stories = [
           "Adarsh had one goal: to leave his comfort zone and build a tougher life abroad. After a painful breakup, he decided that studying overseas would give him exactly what he wanted—pressure, competition, part-time work, self-study, and a completely new life. With his documents and finances finally ready, only the visa appointment remained.",
           "He and his consultant travelled to Mumbai a day early and, instead of staying in their room, Adarsh convinced him to explore the city. After Marine Drive, Juhu Beach and some street food, they ended up near the seaport, watching massive ships and buses being transported across the water. They were taking pictures, completely unaware that one of those buses was about to turn their ordinary evening into a nightmare."
         ],
-        reflection: "Some choices aren't really choices. They just happen.",
+        reflection: "Sometimes, an ordinary day quietly carries the beginning of something extraordinary.",
         image:
           "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1000&q=80",
       },
@@ -26,17 +60,18 @@ export const stories = [
           "Forty passengers were inside. Without thinking about his own safety, Adarsh handed his phone to his consultant and jumped after them. He helped several passengers escape while other swimmers joined the rescue. Eventually, almost everyone reached the surface. But when they counted the survivors, one girl was missing.",
           "Her mother desperately told Adarsh that her daughter had been sleeping near the driver. The bus had sunk almost vertically, meaning she was likely trapped at the bottom. Everyone begged Adarsh not to go back. He looked at the water, took one breath and dived again."
         ],
-        reflection: "A life saved doesn't need an introduction.",
+        reflection: "Courage begins when fear becomes smaller than someone's desperate need for help.",
         image:
           "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1000&q=80",
       },
       {
-        title: "The Girl Beneath the Sea",
+        title: "The Girl",
         paragraphs: [
           "Adarsh reached the sunken bus and found the girl unconscious inside. With his lungs burning and his strength fading, he managed to pull her free and began the difficult ascent. She briefly regained consciousness but quickly started struggling. Adarsh kept her calm and guided her toward the surface.",
           "When they finally reached the top, she collapsed again. Her mother was crying as Adarsh immediately began CPR. After several desperate attempts, the girl suddenly coughed and seawater spilled from her mouth.",
           "She was alive. As the ambulance arrived, she looked at Adarsh and silently mouthed, \"Thank you.\" He smiled and waved goodbye, believing they would never meet again. He was wrong."
         ],
+        reflection: "He saved a stranger that day, unaware she would soon become unforgettable.",
         image:
           "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1000&q=80",
       },
@@ -46,16 +81,18 @@ export const stories = [
           "The rescue became viral overnight. Videos of Adarsh's dives spread across social media, turning an ordinary student into a national sensation. His family called, strangers followed him, and news channels began covering his story. But Adarsh had another problem—his passport had fallen into the sea during the rescue.",
           "Just when he thought his visa plans were ruined, authorities began arranging emergency assistance. Then, among thousands of notifications, one message caught his attention: \"I know you kissed her in the deep sea.\" Adarsh froze. Nobody should have known about that moment. He replied, asking who the person was. The answer was simple: a location, a time, and one instruction—\"Meet me tomorrow.\""
         ],
+        reflection: "The strangest messages sometimes arrive carrying secrets nobody else should know.",
         image:
           "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1000&q=80",
       },
       {
-        title: "The Girl Who Knew",
+        title: "The Secret",
         paragraphs: [
           "Adarsh arrived at the restaurant expecting a stranger. Instead, he found the girl he had rescued sitting across the room. She was the one who had sent the message. She remembered everything from beneath the water, including the moment Adarsh had tried to share his remaining breath with her.",
           "Their conversation soon moved beyond the accident. She asked about his life, his breakup and his dream of studying abroad. He told her everything. She smiled and softly said, \"Awww.\" That evening became the beginning of something neither had expected. They exchanged numbers, started talking every day and slowly became close.",
           "Their friendship eventually turned romantic, but the more they discovered about each other, the more Adarsh realized that the girl he had saved wasn't as simple as she seemed. Saving her from the sea had been the easy part."
         ],
+        reflection: "He thought saving her was the story; meeting her was where everything truly began.",
         image:
           "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1000&q=80",
       }
@@ -437,6 +474,8 @@ export const stories = [
     closingQuote: "Some feelings don't belong to just one lifetime.",
   },
 ];
+
+export const stories = rawStories.map(withStoryImages);
 
 export function getStoryByNo(no) {
   return stories.find((story) => story.no === no);

@@ -320,7 +320,7 @@ function StoriesPage() {
                 <div className="tile-image">
 
                   <img
-                    src={story.image}
+                    src={story.homeImage}
                     alt={story.title}
                   />
 
