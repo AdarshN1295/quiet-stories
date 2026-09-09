@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   ArrowRight,
-  Bookmark,
-  ChevronRight,
   Heart,
   Mail,
   Menu,
@@ -39,7 +37,6 @@ function StoriesPage() {
   const [scrolled, setScrolled] = useState(false);
   const [activeFilter, setActiveFilter] = useState("All");
   const [search, setSearch] = useState("");
-  const [bookmarked, setBookmarked] = useState([]);
   const heroRef = useRef(null);
 
   useEffect(() => {
@@ -54,12 +51,6 @@ function StoriesPage() {
     observer.observe(heroEl);
     return () => observer.disconnect();
   }, []);
-
-  const toggleBookmark = (no) => {
-    setBookmarked((current) =>
-      current.includes(no) ? current.filter((item) => item !== no) : [...current, no]
-    );
-  };
 
   const cycleTheme = () => {
     setTheme((current) =>
@@ -307,40 +298,28 @@ function StoriesPage() {
         {filteredStories.length === 0 ? (
           <p className="no-results">No stories match that feeling yet.</p>
         ) : (
-          <div className="stories-grid">
+          <div className="story-grid">
 
             {filteredStories.map((story) => (
 
-              <article
-                className="story-tile"
+              <Link
+                to={`/stories/${story.no}`}
+                className="story-card"
                 key={story.no}
-                onClick={() => navigate(`/stories/${story.no}`)}
               >
 
-                <div className="tile-image">
+                <div className="card-image">
 
                   <img
                     src={story.homeImage}
                     alt={story.title}
                   />
 
-                  <button
-                    className="bookmark-btn"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      toggleBookmark(story.no);
-                    }}
-                    aria-label="Bookmark story"
-                  >
-                    <Bookmark
-                      size={14}
-                      fill={bookmarked.includes(story.no) ? "currentColor" : "none"}
-                    />
-                  </button>
+                  <div className="image-shade" />
 
                 </div>
 
-                <div className="tile-body">
+                <div className="card-content">
 
                   <span className="story-no">{story.no}</span>
 
@@ -359,16 +338,14 @@ function StoriesPage() {
                     </span>
                   </div>
 
-                  <span className="read-link">
+                  <span className="card-read-link">
                     Read Story
-                    <ArrowRight size={14} />
+                    <ArrowRight size={13} />
                   </span>
 
                 </div>
 
-                <ChevronRight className="tile-chevron" size={18} />
-
-              </article>
+              </Link>
 
             ))}
 

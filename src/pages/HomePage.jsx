@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   ChevronLeft,
@@ -17,94 +17,7 @@ import {
 import "./HomePage.css";
 import { useDocumentMeta } from "../lib/useDocumentMeta";
 import { seo } from "../data/seo";
-import { storyAssets } from "../data/stories.js";
-
-// Falls back to the unsplash placeholder until a hp-cover.* image is
-// dropped into src/assets/Stories/<no>/ for that story.
-const homeCover = (no, fallback) => storyAssets[no]?.["hp-cover"] || fallback;
-
-const stories = [
-  {
-    no: "01",
-    title: "The Day Someone Jumped Into the Water",
-    tagline: "A decision. A stranger. A life.",
-    tags: ["Drama", "Hope"],
-    image: homeCover(
-      "01",
-      "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85"
-    ),
-  },
-  {
-    no: "02",
-    title: "The Girl and the Tiger",
-    tagline: "Sometimes courage finds you, not the other way around.",
-    tags: ["Adventure", "Courage"],
-    image: homeCover(
-      "02",
-      "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1100&q=85"
-    ),
-  },
-  {
-    no: "03",
-    title: "The Last Train Home",
-    tagline: "Some goodbyes aren't the end.",
-    tags: ["Romance", "Bittersweet"],
-    image: homeCover(
-      "03",
-      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1100&q=85"
-    ),
-  },
-  {
-    no: "04",
-    title: "The Horse That Chose His Rider",
-    tagline: "Not all connections need words.",
-    tags: ["Friendship", "Destiny"],
-    image: homeCover(
-      "04",
-      "https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1100&q=85"
-    ),
-  },
-  {
-    no: "05",
-    title: "The Stranger Under the Umbrella",
-    tagline: "Some conversations change everything.",
-    tags: ["Slice of Life", "Warmth"],
-    image: homeCover(
-      "05",
-      "https://images.unsplash.com/photo-1519692933481-e162a57d6721?auto=format&fit=crop&w=1100&q=85"
-    ),
-  },
-  {
-    no: "06",
-    title: "The Night We Watched the Stars",
-    tagline: "Some moments are meant to be remembered.",
-    tags: ["Peace", "Imagination"],
-    image: homeCover(
-      "06",
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1100&q=85"
-    ),
-  },
-  {
-    no: "07",
-    title: "The Letter Never Sent",
-    tagline: "Some words are safest left on paper.",
-    tags: ["Nostalgia", "Regret"],
-    image: homeCover(
-      "07",
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1100&q=85"
-    ),
-  },
-  {
-    no: "08",
-    title: "The Song She Never Finished",
-    tagline: "Some melodies are meant to stay unfinished.",
-    tags: ["Music", "Longing"],
-    image: homeCover(
-      "08",
-      "https://images.unsplash.com/photo-1517230878791-4d28214057c2?auto=format&fit=crop&w=1100&q=85"
-    ),
-  },
-];
+import { stories } from "../data/stories.js";
 
 /**
  * The "What should you do?" panel: 5 independent chapters, browsed with
@@ -363,10 +276,8 @@ const choiceChapters = [
 
 function HomePage() {
   useDocumentMeta(seo.home);
-  const navigate = useNavigate();
   const [theme, setTheme] = useState("dark");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedStory, setSelectedStory] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [chapterIndex, setChapterIndex] = useState(0);
   const [choiceNode, setChoiceNode] = useState(choiceChapters[0].moments[0]);
@@ -384,15 +295,6 @@ function HomePage() {
     observer.observe(heroEl);
     return () => observer.disconnect();
   }, []);
-
-  const openStory = (story) => {
-    setSelectedStory(story);
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   const scrollToStories = () => {
     document
@@ -648,17 +550,17 @@ function HomePage() {
 
           {stories.map((story) => (
 
-            <article
+            <Link
+              to={`/stories/${story.no}`}
               className="story-card"
               key={story.no}
-              onClick={() => openStory(story)}
             >
 
               {/* Image */}
               <div className="card-image">
 
                 <img
-                  src={story.image}
+                  src={story.homeImage}
                   alt={story.title}
                 />
 
@@ -697,9 +599,14 @@ function HomePage() {
 
                 </div>
 
+                <span className="card-read-link">
+                  Read Story
+                  <ArrowRight size={13} />
+                </span>
+
               </div>
 
-            </article>
+            </Link>
 
           ))}
 
@@ -986,74 +893,6 @@ function HomePage() {
         </div>
 
       </footer>
-
-
-      {/* ================= STORY MODAL ================= */}
-      {selectedStory && (
-
-        <div
-          className="story-modal"
-          onClick={() => setSelectedStory(null)}
-        >
-
-          <div
-            className="modal-card"
-            onClick={(event) => event.stopPropagation()}
-          >
-
-            <button
-              className="close-btn"
-              onClick={() => setSelectedStory(null)}
-              aria-label="Close story"
-            >
-              <X size={20} />
-            </button>
-
-
-            <img
-              src={selectedStory.image}
-              alt={selectedStory.title}
-            />
-
-
-            <div className="modal-copy">
-
-              <span className="story-no">
-                {selectedStory.no}
-              </span>
-
-              <h2>
-                {selectedStory.title}
-              </h2>
-
-              <p>
-                {selectedStory.tagline}
-              </p>
-
-
-              <p className="modal-body">
-                Maybe this happened.
-                Maybe it didn't.
-                Either way, there is a small
-                feeling waiting inside this story.
-              </p>
-
-
-              <button
-                className="outline-btn"
-                onClick={() => navigate(`/stories/${selectedStory.no}`)}
-              >
-                Read Full Story
-                <ArrowRight size={15} />
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      )}
 
     </main>
   );

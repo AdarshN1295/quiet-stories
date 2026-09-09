@@ -17,7 +17,7 @@ import {
   Sunset,
   X,
 } from "lucide-react";
-import { getAdjacentStories, getRelatedStories, getStoryByNo } from "../data/stories.js";
+import { getAdjacentStories, getStoryByNo } from "../data/stories.js";
 import "./HomePage.css";
 import "./AboutPage.css";
 import "./StoryPage.css";
@@ -62,10 +62,6 @@ function StoryPage() {
 
   const { prev, next } = useMemo(
     () => (story ? getAdjacentStories(story.no) : { prev: null, next: null }),
-    [story]
-  );
-  const related = useMemo(
-    () => (story ? getRelatedStories(story.no) : []),
     [story]
   );
 
@@ -475,7 +471,7 @@ function StoryPage() {
             </ul>
           </div>
 
-          <div className="sidebar-card">
+          <div className="sidebar-card sidebar-card-center">
             <h3>Liked this story?</h3>
             <p className="sidebar-subtext">Your support keeps these stories alive.</p>
 
@@ -491,7 +487,7 @@ function StoryPage() {
             </div>
           </div>
 
-          <div className="sidebar-card">
+          <div className="sidebar-card sidebar-card-center">
             <h3>Share your thoughts</h3>
             <p className="sidebar-subtext">What did this story make you feel?</p>
 
@@ -504,39 +500,6 @@ function StoryPage() {
         </div>
 
       </div>
-
-
-      {/* ================= RELATED STORIES ================= */}
-      <section className="section related-section">
-
-        <div className="related-section-head">
-          <h2>Related Stories</h2>
-          <Link to="/stories">
-            See All
-            <ArrowRight size={14} />
-          </Link>
-        </div>
-
-        <div className="related-grid">
-          {related.map((item) => (
-            <Link
-              to={`/stories/${item.no}`}
-              className="related-grid-card"
-              key={item.no}
-            >
-              <div className="related-grid-image">
-                <img src={item.homeImage} alt={item.title} />
-              </div>
-              <div className="related-grid-body">
-                <span className="story-no">{item.no}</span>
-                <h3>{item.title}</h3>
-                <p>{item.tagline}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-      </section>
 
 
       {/* ================= FOOTER ================= */}

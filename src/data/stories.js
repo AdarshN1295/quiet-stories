@@ -40,7 +40,7 @@ const rawStories = [
     tags: ["Drama", "Rescue", "Hope"],
     readTime: "12 min read",
     image:
-      "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1400&q=80",
+      " ",
     heroQuote: ["A dive. A girl. A secret."],
     chapters: [
       {
@@ -101,105 +101,131 @@ const rawStories = [
   },
   {
     no: "02",
-    title: "The Girl and the Tiger",
-    tagline: "Sometimes courage finds you, not the other way around.",
-    tags: ["Adventure", "Courage"],
-    readTime: "5 min read",
+    title: "The Tiger Between Us",
+    tagline: "A family trip turns into an unexpected love story.",
+    tags: ["Adventure", "Courage", "Love", "Wildlife"],
+    readTime: "14 min read",
     image:
       "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1400&q=80",
     heroQuote: ["Sometimes courage", "finds you first."],
     chapters: [
       {
-        title: "The Clearing",
+        title: "The Unexpected Stranger",
         paragraphs: [
-          "She hadn't meant to wander so far from the path. But the forest had a way of pulling you deeper.",
+          "Anvi plans a perfect family holiday from Munnar to Madhya Pradesh, visiting Mahakal, Omkareshwar and Pachmarhi before settling into a beautiful jungle resort. While enjoying the resort, she notices a mysterious, fit young man named Adarsh staying alone in a luxury cabin nearby. His calm personality, old melodies and love for solitude immediately catch her attention.",
+          "Later, she sees him swimming effortlessly under the pool lights. When she tries introducing herself, Adarsh unknowingly ignores her while diving underwater, leaving Anvi annoyed and embarrassed. Neither realizes that the next morning, they will be forced to share the same jungle safari."
         ],
+        reflection: "Sometimes the person who annoys you first becomes the person you remember forever.",
         image:
           "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1000&q=80",
       },
       {
-        title: "Eye to Eye",
+        title: "Into the Jungle",
         paragraphs: [
-          "The tiger didn't move. Neither did she. In that stillness, fear turned into something else entirely.",
+          "The next morning, Anvi's family and Adarsh join the same Satpura jungle safari. The guide mentions a newly transferred Bengal tiger from Kanha, unfamiliar with tourists and therefore unpredictable.",
+          "Adarsh immediately senses the danger and discusses precautions with the guide and driver. Everything seems calm until Anvi's younger brother urgently needs to stop. Despite Adarsh's warning, Anvi angrily insists on stopping the jeep.",
+          "The moment they step out, Adarsh notices something strange—the jungle has suddenly become completely silent, and birds are flying unusually high. Then, from the trees, a tiger appears."
         ],
-        reflection: "Courage isn't the absence of fear. It's standing still anyway.",
+        reflection: "The jungle had gone silent, but none of them understood what that silence meant.",
         image:
           "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1000&q=80",
       },
       {
-        title: "Walking Back",
+        title: "The Tiger",
         paragraphs: [
-          "She never told anyone what happened in that clearing. Some things are truer left unexplained.",
+          "The tiger charges toward Anvi's younger brother. Without thinking about herself, Anvi jumps between them to protect him. The tiger turns toward her, attacking with terrifying speed. Her family tries to pull her back, while Adarsh watches her sacrifice everything for her brother. He immediately decides to intervene. After handing his phone to Anvi's mother, Adarsh runs toward the tiger and pushes it away from her. The animal claws his forearm and chest, but Adarsh continues fighting desperately until the guide and Anvi's father manage to get her back into the vehicle.",
+          "The tranquilizer finally takes effect, but not before Adarsh suffers serious injuries and collapses."
         ],
+        reflection: "He didn't save her because he knew her; he saved her because he understood her heart.",
         image:
           "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1000&q=80",
       },
+      {
+        title: "After the Roar",
+        paragraphs: [
+          "Adarsh wakes up in a hospital with his arm heavily bandaged and deep scratches across his chest. Anvi is sitting beside him, holding his hand, with injuries of her own. When he opens his eyes, she immediately calls her family and apologizes for everything, including their argument at the pool. Adarsh laughs and explains that he had never ignored her—he had simply wanted to experience the silence beneath the water. Their misunderstanding finally disappears. Anvi introduces herself properly, and her family invites Adarsh to dinner as a gesture of gratitude. During the meal, Anvi shyly feeds him while their eyes meet across the table, creating a quiet moment neither of them forgets."
+        ],
+        reflection: "Some misunderstandings disappear in seconds when two people finally choose to understand each other.",
+        image:
+          "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "Abhi Na Jaao",
+        paragraphs: [
+          "After dinner, Adarsh and Anvi walk through the garden and talk about relationships, travel and the kind of future they want. Before leaving, Anvi demands that Adarsh sing an old song.",
+          "He refuses at first, but eventually begins singing a familiar melody. When she doesn't recognize it and starts walking away disappointed, Adarsh catches her hand and continues, \"Abhi na jaao chhod kar, ke dil abhi bhara nahi...\" Anvi turns around, overwhelmed by the unexpected moment, and hugs him tightly. Their emotions finally become impossible to hide. They share a gentle kiss and quietly begin a relationship. The next morning, they say goodbye with one final secret hug and promise to stay connected. Neither knows where their new journey will lead."
+        ],
+        reflection: "They came to the jungle as strangers and left knowing they had found something rare.",
+        image:
+          "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1000&q=80",
+      }
     ],
     closingQuote: "The bravest moments rarely feel brave while they're happening.",
   },
   {
     no: "03",
-    title: "The Last Train Home",
-    tagline: "Some goodbyes aren't the end.",
-    tags: ["Romance", "Bittersweet"],
-    readTime: "12 min read",
+    title: "The Girl in the Coupe",
+    tagline: "One overnight journey. One mysterious girl. No trace of her.",
+    tags: ["Thriller", "Horror"],
+    readTime: "15 min read",
     image:
       "https://images.unsplash.com/photo-1755624361318-fb4575756ca5?auto=format&fit=crop&w=1400&q=80",
     heroQuote: [
-      "Some people arrive",
-      "in your life, just in time",
-      "to leave a mark...",
+      "A stranger, a journey,",
+      "a ghost."
     ],
     chapters: [
       {
-        title: "A Familiar Stranger",
+        title: "The Empty Coupe",
         paragraphs: [
-          "It was a cold evening at the station. The train was late, as usual. People were tired, voices were louder, and the air smelled like chai, dust, and waiting.",
-          "She was sitting a few seats away, wrapped in a light sweater, with a book in her hands. Not the kind of person who asked for attention, but someone you noticed anyway.",
+          "Adarsh boards a train from Ahmedabad to Indore, finally experiencing something he had always wanted—a private two-person coupe all to himself. As the train leaves the station, he switches off the lights, puts on his earphones and watches the city lights disappear into the darkness. Just when he begins enjoying the peaceful journey, someone knocks on his coupe door.",
+          "Standing outside is a beautiful girl dressed in red traditional clothes. She introduces herself as Nitika, or Niti, and calmly tells him that she is his coupe mate. Adarsh is surprised but welcomes her inside. Their simple introduction soon turns into laughter, teasing and a surprisingly comfortable friendship.",
         ],
-        reflection: "I don't know why, but I kept looking at her.",
+        reflection: "Sometimes solitude ends with a knock from someone you were never expecting.",
         image:
           "https://images.unsplash.com/photo-1755624361318-fb4575756ca5?auto=format&fit=crop&w=1000&q=80",
         caption: "Some people just feel like a different kind of story...",
       },
       {
-        title: "A Conversation",
+        title: "The Girl in Red",
         paragraphs: [
-          "It started with something simple — a question about the delay. Then another. And before we realized, we were talking about everything and nothing.",
-          "Books, cities, dreams, fears... the kind of conversation that makes time feel lighter.",
+          "Niti and Adarsh spend the journey sharing food, jokes and embarrassing stories. Over pizza, their conversation turns strangely personal when Niti starts talking about ghosts and a mysterious girl supposedly seen wandering through trains at night. Adarsh laughs at her stories, convinced she is only trying to scare him. Their teasing takes a serious turn when Niti tells him that perhaps his habit of travelling alone is why people get hurt by him. Adarsh suddenly becomes quiet.",
+          "After apologizing, Niti asks about his past, and he finally tells her about his breakup, betrayal and the pain he has been carrying. For the first time that night, their conversation becomes completely honest.",
         ],
-        reflection: "Strangers, but it didn't feel like it.",
+        reflection: "Two strangers can sometimes understand wounds that familiar people never noticed.",
         image:
           "https://images.unsplash.com/photo-1694010785153-d41819fcfe55?auto=format&fit=crop&w=1000&q=80",
         caption: "Some conversations feel like home...",
       },
       {
-        title: "The Unexpected Detour",
+        title: "The Urban Legend",
         paragraphs: [
-          "The announcement echoed again — the train was delayed by another hour.",
-          "We decided to get some chai. Then we walked a little. Talked a little more. Laughed a lot more. It felt like the kind of evening you don't plan, but are grateful for.",
+          "As the night deepens, Niti reveals more about the train's ghost story. According to the legend, a girl once disappeared from the same route and is believed to wander through the train at night, talking to lonely passengers. Niti jokes that perhaps the ghost has already found Adarsh.",
+          "He plays along, but secretly studies her behavior. She feels warm, breathes normally and leaves a familiar fragrance behind, convincing him that her ghost act is simply an elaborate prank. They continue talking through the entire night, discussing relationships, fear, loneliness and life. Niti never reveals where she came from or where she is going.",
+          "Strangely, Adarsh doesn't feel suspicious anymore. He simply enjoys having someone beside him."
         ],
-        reflection: "Sometimes, detours lead to the best parts of the journey.",
+        reflection: "The more mysterious she became, the less Adarsh wanted to know the truth.",
         image:
           "https://images.unsplash.com/photo-1712115254751-f9dd7711ce1b?auto=format&fit=crop&w=1000&q=80",
       },
       {
-        title: "What Could Have Been",
+        title: "The Missing Girl",
         paragraphs: [
-          "The train finally arrived.",
-          "There were a few more things we wanted to say, but some feelings are better left unspoken. She smiled, said goodbye, and stepped into a different direction — quite literally.",
+          "Morning arrives, and the train finally reaches its destination. Adarsh steps outside the coupe and waits while Niti puts on her sandals. He casually tells her to hurry because the train could move again. A railway service worker suddenly enters the compartment, forcing Adarsh to stop him. \"There's a girl inside. Give her some privacy.\" The worker stares at him strangely. \"Girl? Sir, there's nobody here.\" Adarsh turns around. The coupe is empty. Niti is gone. Her belongings are gone.",
+          "There isn't even a trace that another passenger had been there. Adarsh stands frozen, unable to understand what he is seeing. The worker insists that Adarsh was the only passenger assigned to that coupe.",
         ],
-        reflection: "Some stories don't get a second chapter. And maybe that's okay.",
+        reflection: "The journey had ended, but the person beside him had somehow vanished.",
         image:
           "https://images.unsplash.com/photo-1646607796792-779ffefdd1b5?auto=format&fit=crop&w=1000&q=80",
         caption: "Some people are meant to be a beautiful chapter, not the whole book.",
       },
       {
-        title: "Some Goodbyes Aren't the End",
+        title: "The Passenger Who Never Existed",
         paragraphs: [
-          "I never saw her again. But sometimes I still think about that evening — and how a simple train delay turned into something memorable.",
-          "Maybe she was just a stranger. Maybe not. But either way, I'm glad our stories crossed, even if just for a little while.",
+          "Adarsh refuses to believe what happened and checks the compartment repeatedly. He asks railway staff about Nitika, but nobody recognizes the name. Even the passenger records show only one occupant in his coupe. Then he notices something that makes his blood run cold—a faint red thread caught near the seat where Niti had been sitting. He remembers her stories, her strange answers and the way she knew things about him that he had never told her.",
+          "Finally, he searches the train's old ghost legend online and finds a photograph attached to an article about a girl who disappeared years ago. The girl in the photograph is wearing the same red traditional clothes. It is Niti. Adarsh stares at the screen, remembering her final words from the previous night: \"You shouldn't be afraid of ghosts. Sometimes they're just people who don't want to be forgotten.\"",
         ],
+        reflection: "He boarded the train alone, but something followed him home.",
         image:
           "https://images.unsplash.com/photo-1721832281424-9ab52e8a6be7?auto=format&fit=crop&w=1000&q=80",
         caption: "Not all endings are sad. Some are just... quiet.",
@@ -210,268 +236,66 @@ const rawStories = [
   },
   {
     no: "04",
-    title: "The Horse That Chose His Rider",
-    tagline: "Not all connections need words.",
-    tags: ["Friendship", "Destiny"],
-    readTime: "5 min read",
+    title: "The Life I Left Behind",
+    tagline: "He went to Venice to escape his past, only to find it waiting.",
+    tags: ["Friendship", "Destiny", "Drama", "Emotional"],
+    readTime: "16 min read",
     image:
       "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1400&q=80",
-    heroQuote: ["Not all connections", "need words."],
+    heroQuote: ["Sometimes,", "home is someone."],
     chapters: [
       {
-        title: "First Meeting",
+        title: "Marina",
         paragraphs: [
-          "He'd been the wildest horse on the ranch — until the day he wasn't.",
-          "No one taught him to trust her. He just did.",
+          "Adarsh sits inside his counsellor's cabin, repeatedly mentioning only one name—Marina. The counsellor asks why he doesn't simply meet her again, but Adarsh's mind drifts into a painful memory: Marina crying as he promises that he will return after a few months. When the counsellor reminds him that some people rebuild their lives even after losing everything, Adarsh finally loses his composure. \"It's been a month! How do you think she's waiting for me?\" he shouts before revealing the message that changed everything—Marina is pregnant.",
+          "The counsellor urges him to return, not only for her, but to finally confront the guilt he has been carrying.",
         ],
+        reflection: "Sometimes running from the past only gives it more time to catch up.",
         image:
           "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
       },
       {
-        title: "Without Words",
+        title: "The Girl in Venice",
         paragraphs: [
-          "They never needed commands, only presence. A hand on his neck said more than any rope ever could.",
+          "Adarsh takes a month's leave and flies to Venice, hoping distance will clear his mind. The moment he arrives, however, his memories begin overwhelming him. While exploring the city, he notices a beautiful woman crying alone on the street. Her name is Marina. She initially asks him to leave her alone, but Adarsh stays beside her and gently asks what happened.",
+          "Eventually, she tells him that after her parents died, her uncle took control of their property, forced her out and left her with almost nothing. Adarsh takes her to an affordable clothing store, helps her buy essentials and offers her his room for the night. He sleeps on the couch while she takes the bed, unaware that this simple act of kindness will change both their lives."
         ],
-        reflection: "Not all connections need words.",
+        reflection: "He arrived in Venice searching for peace and found someone searching for a home.",
         image:
           "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
       },
       {
-        title: "Chosen",
+        title: "A Home in Venice",
         paragraphs: [
-          "People said she picked him. The truth is, he'd already chosen her, long before she noticed.",
+          "During the freezing night, Marina notices Adarsh shivering on the couch and quietly invites him to share the warmth of the bed. The next morning, she prepares tea for him, becoming his unofficial guide through Venice. Days turn into weeks as they explore canals, narrow streets and quiet corners of the city.",
+          "Adarsh instinctively protects Marina in crowded places, making her feel safe in a way she hasn't felt since losing her parents. Eventually, he tells her about his breakup and the pain he has been hiding.",
+          "A single tear escapes his eye while he talks about the memories that still hurt. Marina gently embraces him and whispers, \"Don't be sad.\" Their comfort slowly becomes affection, and their affection becomes something neither of them expected."
         ],
+        reflection: "Two broken people found warmth in each other before either understood what love meant.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "The Message",
+        paragraphs: [
+          "As Adarsh's departure approaches, Marina becomes increasingly afraid of losing him. The night before his flight, they share an emotional and deeply intimate evening, believing it may be their last. The following morning, Marina hides Adarsh's travel bag, desperately trying to keep him from leaving. Adarsh, already worried about his responsibilities back home, becomes frustrated and angry. Their argument escalates, and he finally walks out without looking back.",
+          "Hours later, his phone vibrates. One message from Marina stops him completely: \"I'm pregnant.\" Before he can process it, the memory disappears as an air hostess wakes him from his thoughts. \"Sir, please fasten your seat belt. We're about to land.\" Adarsh looks out of the window, realizing he has finally returned to Venice—not as a tourist, but as someone searching for his family.",
+        ],
+        reflection: "The message he feared most became the reason he could never truly leave her.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "Coming Home",
+        paragraphs: [
+          "After landing, Adarsh returns to the places he remembers from Venice. Suddenly, he sees a group of men harassing a woman and trying to snatch her bag. He rushes toward them, ready to intervene, only to freeze when he recognizes the woman—Marina. Beside her stands a little girl. His daughter. Marina is furious and pushes him away, still carrying the pain of his departure, but Adarsh refuses to walk away again. He meets little Tia and kisses her forehead for the first time. Later, at Marina's home, the landlord arrives demanding overdue rent. Adarsh quietly pays everything and announces, \"We're leaving tomorrow. She's my wife, and Tia is my daughter. We're going to India.\" Marina is stunned, especially because she has no proper documents. Adarsh uses every connection he can to bring them to India. Months later, surrounded by family, he marries Marina in a beautiful celebration. This time, when he promises to stay, he means it."
+        ],
+        reflection: "He once promised to return after a few months; this time, he returned to stay forever.",
         image:
           "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
       },
     ],
     closingQuote: "Some bonds are decided long before either side realizes it.",
-  },
-  {
-    no: "05",
-    title: "The Stranger Under the Umbrella",
-    tagline: "Some conversations change everything.",
-    tags: ["Slice of Life", "Warmth"],
-    readTime: "5 min read",
-    image:
-      "https://images.unsplash.com/photo-1769784497064-d791c39fef39?auto=format&fit=crop&w=1400&q=80",
-    heroQuote: ["Some conversations", "change everything."],
-    chapters: [
-      {
-        title: "Caught in the Rain",
-        paragraphs: [
-          "The rain came without warning, the way it always does when you've forgotten an umbrella.",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1769784497064-d791c39fef39?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "Sharing Shelter",
-        paragraphs: [
-          "He held it a little higher so she could fit too. Neither of them said much, at first.",
-        ],
-        reflection: "Some conversations change everything.",
-        image:
-          "https://images.unsplash.com/photo-1769784497064-d791c39fef39?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "After the Rain",
-        paragraphs: ["The rain stopped eventually. They didn't move right away."],
-        image:
-          "https://images.unsplash.com/photo-1769784497064-d791c39fef39?auto=format&fit=crop&w=1000&q=80",
-      },
-    ],
-    closingQuote: "Shelter is sometimes just an excuse to stay a little longer.",
-  },
-  {
-    no: "06",
-    title: "The Night We Watched the Stars",
-    tagline: "Some moments are meant to be remembered.",
-    tags: ["Peace", "Imagination"],
-    readTime: "4 min read",
-    image:
-      "https://images.unsplash.com/photo-1654692559527-5905a352bc6e?auto=format&fit=crop&w=1400&q=80",
-    heroQuote: ["Some moments are", "meant to be remembered."],
-    chapters: [
-      {
-        title: "Lying Back",
-        paragraphs: [
-          "They spread the blanket on the hill without saying much. Some evenings don't need conversation.",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1654692559527-5905a352bc6e?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "Counting Nothing",
-        paragraphs: [
-          "They weren't really counting stars. Just letting the sky remind them how small their worries were.",
-        ],
-        reflection: "Some moments are meant to be remembered, not explained.",
-        image:
-          "https://images.unsplash.com/photo-1654692559527-5905a352bc6e?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "Still There",
-        paragraphs: [
-          "Whenever she looks up now, some part of that night comes back to her.",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1654692559527-5905a352bc6e?auto=format&fit=crop&w=1000&q=80",
-      },
-    ],
-    closingQuote: "The sky has a way of making everything else feel quieter.",
-  },
-  {
-    no: "07",
-    title: "Letters I Never Sent",
-    tagline: "Some words were never meant to be read.",
-    tags: ["Romance", "Reflection"],
-    readTime: "5 min read",
-    image:
-      "https://images.unsplash.com/photo-1754697831323-6d51e460ba8f?auto=format&fit=crop&w=1400&q=80",
-    heroQuote: ["Some words were", "never meant to be read."],
-    chapters: [
-      {
-        title: "The First Letter",
-        paragraphs: [
-          "She wrote his name at the top, then stopped. What was there really to say?",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1754697831323-6d51e460ba8f?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "The Drawer",
-        paragraphs: [
-          "Every letter went into the same drawer. Never sent, never quite finished.",
-        ],
-        reflection: "Some words were never meant to be read. Just felt.",
-        image:
-          "https://images.unsplash.com/photo-1754697831323-6d51e460ba8f?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "Years Later",
-        paragraphs: [
-          "She still has the drawer. She's never opened it again, but she's never thrown it away either.",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1754697831323-6d51e460ba8f?auto=format&fit=crop&w=1000&q=80",
-      },
-    ],
-    closingQuote: "Not every feeling needs an audience to be real.",
-  },
-  {
-    no: "08",
-    title: "The Road That Wasn't on the Map",
-    tagline: "Sometimes the wrong turn takes you to the right place.",
-    tags: ["Adventure", "Self-Discovery"],
-    readTime: "6 min read",
-    image:
-      "https://images.unsplash.com/photo-1741333645858-d1e28640b306?auto=format&fit=crop&w=1400&q=80",
-    heroQuote: ["Sometimes the wrong turn", "takes you to the right place."],
-    chapters: [
-      {
-        title: "Off Course",
-        paragraphs: [
-          "The GPS lost signal an hour ago. The road ahead wasn't on any map he'd seen.",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1741333645858-d1e28640b306?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "The Detour",
-        paragraphs: [
-          "He almost turned back. Almost. But something about the quiet pulled him forward instead.",
-        ],
-        reflection: "Sometimes the wrong turn takes you to the right place.",
-        image:
-          "https://images.unsplash.com/photo-1741333645858-d1e28640b306?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "Somewhere New",
-        paragraphs: [
-          "He never did find what he was originally looking for. He found something better instead.",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1741333645858-d1e28640b306?auto=format&fit=crop&w=1000&q=80",
-      },
-    ],
-    closingQuote: "Not all who wander are lost. Some are just early.",
-  },
-  {
-    no: "09",
-    title: "A Wish at Midnight",
-    tagline: "Some wishes are for others.",
-    tags: ["Hope", "Kindness"],
-    readTime: "4 min read",
-    image:
-      "https://images.unsplash.com/uploads/14113370245310679c486/d5f32508?auto=format&fit=crop&w=1400&q=80",
-    heroQuote: ["Some wishes", "are for others."],
-    chapters: [
-      {
-        title: "The Lantern",
-        paragraphs: [
-          "He lit the paper lantern carefully, shielding the flame from the wind.",
-        ],
-        image:
-          "https://images.unsplash.com/uploads/14113370245310679c486/d5f32508?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "Not for Himself",
-        paragraphs: [
-          "Everyone assumed he was wishing for himself. He wasn't. He never really did.",
-        ],
-        reflection: "Some wishes are for others.",
-        image:
-          "https://images.unsplash.com/uploads/14113370245310679c486/d5f32508?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "Watching It Rise",
-        paragraphs: [
-          "He watched until the light disappeared into the dark, hoping it reached wherever it needed to.",
-        ],
-        image:
-          "https://images.unsplash.com/uploads/14113370245310679c486/d5f32508?auto=format&fit=crop&w=1000&q=80",
-      },
-    ],
-    closingQuote: "The kindest wishes are the ones nobody asks you to make.",
-  },
-  {
-    no: "10",
-    title: "Maybe in Another Life",
-    tagline: "Different people. Different times. Same feelings.",
-    tags: ["Fantasy", "What If"],
-    readTime: "5 min read",
-    image:
-      "https://images.unsplash.com/photo-1759893576665-c59922b5b003?auto=format&fit=crop&w=1400&q=80",
-    heroQuote: ["Different people.", "Different times."],
-    chapters: [
-      {
-        title: "The Window",
-        paragraphs: [
-          "She stood at the window, watching the city lights blur into the evening.",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1759893576665-c59922b5b003?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "A Familiar Feeling",
-        paragraphs: [
-          "Something about the moment felt borrowed, like she'd stood there before, in another life, another version of now.",
-        ],
-        reflection: "Different people. Different times. Same feelings.",
-        image:
-          "https://images.unsplash.com/photo-1759893576665-c59922b5b003?auto=format&fit=crop&w=1000&q=80",
-      },
-      {
-        title: "Maybe",
-        paragraphs: [
-          "Maybe none of it was real. Maybe all of it was. Either way, she kept watching.",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1759893576665-c59922b5b003?auto=format&fit=crop&w=1000&q=80",
-      },
-    ],
-    closingQuote: "Some feelings don't belong to just one lifetime.",
   },
 ];
 
@@ -486,13 +310,4 @@ export function getAdjacentStories(no) {
   const prev = stories[(index - 1 + stories.length) % stories.length];
   const next = stories[(index + 1) % stories.length];
   return { prev, next };
-}
-
-export function getRelatedStories(no, count = 3) {
-  const index = stories.findIndex((story) => story.no === no);
-  const related = [];
-  for (let i = 1; related.length < count && i < stories.length; i += 1) {
-    related.push(stories[(index + i) % stories.length]);
-  }
-  return related;
 }
