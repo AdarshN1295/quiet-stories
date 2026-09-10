@@ -297,6 +297,68 @@ const rawStories = [
     ],
     closingQuote: "Some bonds are decided long before either side realizes it.",
   },
+  {
+    no: "05",
+    title: "The Comfort I Needed",
+    tagline: "After losing everything, Adarsh found comfort in an unexpected stranger.",
+    tags: ["Healing", "Comfort"],
+    readTime: "14 min read",
+    image:
+      "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1400&q=80",
+    heroQuote: ["Someone,", "finally stayed."],
+    chapters: [
+      {
+        title: "Hundreds of Dreams",
+        paragraphs: [
+          "Adarsh grows up carrying hundreds of dreams and an obsession with becoming his best version. But life keeps answering him with failure—sports, college, relationships, higher studies, technology, accidents and problems at home. The person he once trusted most, his girlfriend, betrays him and leaves behind a silence he doesn't know how to fill.",
+          "His brother becomes the only person he can still talk to, until even that relationship cracks when his brother harshly criticizes the dream Adarsh has been working so hard to achieve. For the first time, Adarsh feels completely alone.",
+        ],
+        reflection: "Sometimes the hardest part of failure is having nobody left to tell about it.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "The Girl on the Highway",
+        paragraphs: [
+          "Unable to control his emotions, Adarsh takes his bike and rides into the night, desperately trying to outrun his thoughts. Tears roll down his face as the empty highway disappears beneath him. Suddenly, a girl crosses the road and narrowly avoids his bike. She calls him \"blind,\" and something inside him finally snaps.",
+          "Adarsh stops, confronts her and releases months of frustration in a furious outburst before throwing his helmet onto the road. But moments later, his anger collapses into exhaustion. Sitting alone on the roadside, he quietly apologizes. Instead of leaving, the girl sits beside him"
+        ],
+        reflection: "Anger was only the surface; underneath it was someone desperately asking to be understood.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "I'm Here",
+        paragraphs: [
+          "The girl gently runs her fingers through his hair and asks, \"Hey... everything okay?\" Adarsh refuses to talk, but she doesn't force him. When he tries to leave, she simply hugs him from the side and whispers, \"You can share with me.\" Something inside him breaks. His tears return as he finally admits, \"Koi kisika nahi hota... jise hum apna mante hain, woh bhi nahi.\" She holds him tighter, gives him water and calmly tells him to breathe. Then she asks the simplest question nobody had asked him that night: \"Have you eaten anything?\" She takes him to a small cozy restaurant nearby and stays beside him until he finally feels safe."
+        ],
+        reflection: "She didn't solve his problems; she simply refused to let him face them alone.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "The Emotional Cushion",
+        paragraphs: [
+          "Her name is revealed as Anaya, a Pahadi girl from Makandi, Uttarakhand, who is new to the city. What begins as one unexpected night becomes a friendship built almost entirely on comfort. Whenever Adarsh feels overwhelmed, she doesn't demand explanations. Sometimes she simply hugs him. Sometimes they sit together in silence.",
+          "On difficult nights, she lets him rest beside her while gently tapping his back until his thoughts become quiet. For someone who had spent years searching for emotional security, her presence feels strangely familiar. Adarsh slowly realizes that healing doesn't always arrive through advice. Sometimes it arrives through someone's quiet decision to stay.",
+        ],
+        reflection: "He wasn't looking for love anymore; he was simply grateful someone stayed.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "Just The Beginning",
+        paragraphs: [
+          "Their friendship grows deeper with every passing day. One night, Adarsh lies beside Anaya, holding her gently around the waist while she softly massages his head and taps his back. Neither speaks. There is nothing left to explain. For the first time in a long while, Adarsh falls asleep without fighting his thoughts.",
+          "Anaya has become the emotional cushion he never knew he needed—the person who makes silence feel safe. But neither of them realizes that this quiet friendship is slowly becoming something much deeper. And somewhere between comfort, trust and countless unspoken moments, a new chapter of their lives is already beginning."
+        ],
+        reflection: "Some relationships don't begin with love; they begin with the feeling of finally being safe.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+    ],
+    closingQuote: "Some bonds are decided long before either side realizes it.",
+  }
 ];
 
 export const stories = rawStories.map(withStoryImages);
