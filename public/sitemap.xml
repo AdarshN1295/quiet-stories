@@ -1,0 +1,45 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://quietstories.in/</loc>
+  </url>
+
+  <url>
+    <loc>https://quietstories.in/stories</loc>
+  </url>
+
+  <url>
+    <loc>https://quietstories.in/notes</loc>
+  </url>
+
+  <url>
+    <loc>https://quietstories.in/about</loc>
+  </url>
+
+  <url>
+    <loc>https://quietstories.in/say-hello</loc>
+  </url>
+
+  <url>
+    <loc>https://quietstories.in/stories/01</loc>
+  </url>
+
+  <url>
+    <loc>https://quietstories.in/stories/02</loc>
+  </url>
+
+  <url>
+    <loc>https://quietstories.in/stories/03</loc>
+  </url>
+
+  <url>
+    <loc>https://quietstories.in/stories/04</loc>
+  </url>
+  <url>
+    <loc>https://quietstories.in/stories/05</loc>
+  </url>
+
+</urlset>
+```
