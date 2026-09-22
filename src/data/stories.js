@@ -358,6 +358,68 @@ const rawStories = [
       },
     ],
     closingQuote: "Some bonds are decided long before either side realizes it.",
+  },
+  {
+    no: "06",
+    title: "The Last Step Before the Fall",
+    tagline: "A quiet afternoon becomes a desperate fight against time, fear, and a deadly waterfall.",
+    tags: ["Rescue", "Courage"],
+    readTime: "10 min read",
+    image:
+      "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1400&q=80",
+    heroQuote: ["One fall.,", "One stranger. One impossible rescue."],
+    chapters: [
+      {
+        title: "The Girl by the Waterfall",
+        paragraphs: [
+          "The waterfall was a breathtaking attraction, but beneath its beauty was a terrifying force—a towering wall of water crashing into a deep, turbulent gorge. Near the entrance, Meera ran a small street-food cart selling tea, corn, and noodles. That afternoon, three men approached her, demanding money and claiming the area belonged to them. When she refused, one grabbed her cart and threatened to destroy it.",
+          "The argument grew louder. Then he shoved her. Meera stumbled onto the wet stone beside the waterfall. For one terrifying second, she tried to regain her balance. Then the stone gave way. Her scream vanished beneath the deafening roar as she fell over the edge, disappearing toward the violent water far below.",
+        ],
+        reflection: "Sometimes, danger arrives quietly—until one wrong step changes everything.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "The Jump",
+        paragraphs: [
+          "Adarsh had been photographing the waterfall when he noticed the commotion. He was too far away to understand the argument, but he saw Meera disappear over the edge. People began shouting and calling for help. Looking down, he saw her being dragged through the churning water toward a narrow channel beneath the falls. Without thinking about the terrifying height, jagged rocks, or freezing current, he jumped. The impact knocked the air from his lungs. He surfaced several metres away and fought toward her. \"Look at me! Don't let go!\" he shouted, grabbing her wrist. Another wave tore them apart, but he caught her again and pushed against the rocks.",
+          "Above them, tourists watched helplessly. The waterfall had become a roaring wall of white water, and the two figures beneath it were slowly disappearing from view."
+        ],
+        reflection: "He didn't know her name yet, but he knew he couldn't let her disappear.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "Thirty Minutes Beneath the Falls",
+        paragraphs: [
+          "Adarsh tried guiding Meera toward calmer water, but every attempt was met by another powerful current. Her ankle was injured, and she could barely move. Finally, he found a narrow ledge behind the falling water—slippery, freezing, and barely large enough for both of them. \"I can't do this,\" Meera whispered. \"You can. Just keep breathing,\" Adarsh replied. Above them, rescuers lowered ropes, but the spray made it difficult to see.",
+          "The current repeatedly dragged Adarsh away from the ledge. Minutes became half an hour. His arms grew numb, his chest burned, and his legs trembled. When Meera lost her grip, he caught her just before she was swept into the deeper channel, striking his shoulder against the rocks. After nearly forty minutes, a rescue rope finally reached them.",
+          "Adarsh secured Meera first and watched rescuers pull her upward. Only then did he allow them to guide him out. He collapsed onto the wet ground, gasping for air. Meera was unconscious, but alive."
+        ],
+        reflection: "Courage isn't the absence of fear; sometimes it's holding on while everything hurts.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "The Truth Behind the Fall",
+        paragraphs: [
+          "At the hospital, Adarsh was treated for bruises, a deep shoulder cut, and severe exhaustion. Meanwhile, police collected videos showing the three men threatening Meera, including the moment she was pushed. The men had disappeared, but the search continued. When Meera regained consciousness, her first question was, \"Where is the man who jumped?\" She insisted on meeting Adarsh. \"You saved my life,\" she said, her ankle wrapped in a bandage. He smiled. \"You scared everyone enough for one lifetime.\" She explained that the men had been threatening her for weeks, demanding money and destroying her supplies whenever she refused. She had been afraid to report them. Adarsh listened quietly, then said, \"You don't have to face them alone anymore.\" Outside, police received a new lead: a tourist had captured the men's vehicle number. The search was finally becoming a case.",
+        ],
+        reflection: "Saving someone from the water was only the beginning; helping them feel safe was the real rescue.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+      {
+        title: "The Last Step Before the Fall",
+        paragraphs: [
+          "Two days later, police found the three men hiding near the highway. At the station, Meera stood behind the officers, still wearing a support brace. The men denied everything, but the recordings and witness statements exposed their extortion racket.",
+          "Meera's cart had been their latest target. All three were arrested, and police began investigating their other victims. After Meera gave her statement, she found Adarsh waiting outside. \"You didn't have to come,\" she said. \"I know. But I wanted to.\" Weeks later, Meera returned to the waterfall. Her cart had been repaired, with a new sign: \"Meera's Corner — Tea, Corn & Courage.\" Adarsh arrived carrying a camera. \"You came back,\" she smiled. \"I still haven't taken that photograph,\" he said, pointing toward the enormous falls. She handed him tea. Watching the water, she whispered, \"That day, I thought my life was ending.\" Adarsh looked at her. \"And now?\" She smiled. \"Now I think it was changing.\" He photographed Meera beside her cart, sunlight falling across her face. The rescue had ended weeks ago. But the friendship that began beneath the falls was only just beginning."
+        ],
+        reflection: "Some rescues end at the shore; the rarest ones continue long after the water is gone.",
+        image:
+          "https://images.unsplash.com/photo-1756639292737-f2c89a3ab5bb?auto=format&fit=crop&w=1000&q=80",
+      },
+    ]
   }
 ];
 
